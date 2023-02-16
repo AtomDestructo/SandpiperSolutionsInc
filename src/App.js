@@ -13,7 +13,7 @@ function App() {
     return (
         <>
             <div className="App">
-                <nav className="navbar navbar-expand-md">
+                <nav className="navbar navbar-expand-md spsNavBar">
                     <a href="/" className="navbar-brand">
                         <img
                             className="logo"
@@ -37,7 +37,7 @@ function App() {
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li className="nav-item">
                                 <Link to="/" className="">
-                                    Sandpiper Solutions
+                                    SandPiper Solutions
                                 </Link>
                             </li>
                             <li className="nav-item">
@@ -69,7 +69,7 @@ function App() {
                     </div>
                 </nav>
                 {/* Page components are mounted under the 'section' tab */}
-                <section>
+                <section className="container">
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
@@ -84,7 +84,93 @@ function App() {
                         <Route path="/contact" element={<Contact />} />
                     </Routes>
                 </section>
-                <footer></footer>
+                <hr />
+                <footer className="container sbsFooter sbsTopPadding sbsBottomPadding sbsMargin">
+                    <div className="row justify-content-center">
+                        <div className="col-md-4 align-self-center orderThird">
+                            <img src="/media/imgtest.png" width={"200px"} />
+                            <p>Instagram Twitter Facebook</p>
+                        </div>
+                        <div
+                            className="col-sm-5 align-self-center orderFirst"
+                            style={{ textAlign: "left" }}
+                        >
+                            <h4>Contact Us</h4>
+                            <ul className="list-unstyled">
+                                <li className="mb-2">
+                                    SandPiper Solutions Inc.
+                                </li>
+                                <li className="mb-2">
+                                    Suite 168, 315 -5155 – 130th Avenue S.E.
+                                </li>
+                                <li className="mb-2">
+                                    Calgary, Alberta T2Z 0N3
+                                </li>
+                                <li className="mb-2">Phone:</li>
+                                <li className="mb-2">
+                                    Email: info@sandpiper.ca
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            className="col-sm-3 align-self-center orderSecond"
+                            style={{ textAlign: "left" }}
+                        >
+                            <h4>Links</h4>
+                            <ul className="list-unstyled">
+                                <li className="mb-2">
+                                    <Link to="/" className="nav-link">
+                                        Home
+                                    </Link>
+                                </li>
+                                <li className="mb-2">
+                                    <Link to="/about" className="nav-link">
+                                        About Us
+                                    </Link>
+                                </li>
+                                <li className="mb-2">
+                                    <Link
+                                        to="/subsidiaries"
+                                        className="nav-link"
+                                    >
+                                        Subsidiaries
+                                    </Link>
+                                </li>
+                                <li className="mb-2">
+                                    <Link to="/investors" className="nav-link">
+                                        Investor Relations
+                                    </Link>
+                                </li>
+                                <li className="mb-2">
+                                    <Link to="/contact" className="nav-link">
+                                        Contact Us
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br />
+                    <div className="row justify-content-center sbsBottomPadding">
+                        <div
+                            className="col-md-10"
+                            style={{ fontSize: 14 + "px" }}
+                        >
+                            SandPiper Solutions Inc. acknowledges the
+                            traditional territories of the Blackfoot and the
+                            people of the Treaty 7 Region in Southern Alberta,
+                            which includes the Piikani, Kainai and Siksika
+                            Nations; the Stoney-Nakoda, including the Chiniki,
+                            Bearspaw and Wesley First Nations; and the Tsuut’ina
+                            Nation. The City of Chestermere is also home to the
+                            Métis Nation of Alberta, Region 3
+                        </div>
+                    </div>
+                    <div>
+                        <p>
+                            &copy; {"<"}insert copywrite here{">"}
+                        </p>
+                    </div>
+                </footer>
             </div>
         </>
     );
